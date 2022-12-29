@@ -14,12 +14,12 @@ function generatePassword() {
 }
 
 function passwordPrompts() {
-  passwordLength = parseInt(prompt("How many characters would you like your password to be? It must be between 8 and 128.");
+  passwordLength = parseInt(prompt("How many characters would you like your password to be? It must be between 8 and 128."));
 
-  if (isNaN(passwordLength) || passwordLength <8 || passwordLength > 128)
+  if (isNaN(passwordLength) || passwordLength <8 || passwordLength > 128){
     alert ("Password length must be entered in digit form and must be a minimum of 8 characters or maximum of 128 characters")
     return false;
-}
+  }
 
   if (confirm("Would you like to use special characters in your password?")) {
   choiceArray = choiceArray.concat(charactersArray);
@@ -36,7 +36,7 @@ function passwordPrompts() {
   if (confirm("Would you like to use numbers in your password?")) {
     choiceArray = choiceArray.concat(numbersArray);
   }
-
+}
 
 
 
