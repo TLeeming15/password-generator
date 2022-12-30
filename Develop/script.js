@@ -9,7 +9,7 @@ var numbersArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 var generateBtn = document.querySelector("#generate")
 
-
+generateBtn.addEventListener("click",writePassword);
 
 function passwordPrompts() {
 
@@ -17,7 +17,7 @@ function passwordPrompts() {
 
   passwordLength = parseInt(prompt("How many characters would you like your password to be? It must be between 8 and 128."));
 
-  if (isNaN(passwordLength) || passwordLength <8 || passwordLength > 128){
+  if (isNaN(passwordLength) || passwordLength < 7 || passwordLength > 128){
     alert ("Password length must be entered in digit form and must be a minimum of 8 characters or maximum of 128 characters")
     return false;
   }
@@ -37,35 +37,30 @@ function passwordPrompts() {
   if (confirm("Would you like to use numbers in your password?")) {
     choiceArray = choiceArray.concat(numbersArray);
   }
+
+  return true;
 }
-
-
-
-
-
-generateBtn.addEventListener("click",generatePassword);
-
-// Get references to the #generate elemen
 
 // Write password to the #password input
 function writePassword() {
   var properPrompts = passwordPrompts();
-
-  if (properPrompts){
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+  
+  if (properPrompts){
+    var password = generatePassword();
+    passwordText.value = password;
   }
 }
 
 function generatePassword() {
 var password = "";
-for(var i = 0; i < passwordLength; i++){
+  for(var i = 0; i < passwordLength; i++){
   var randomCharacter = Math.floor(Math.random() * choiceArray.length);
-  password = password + choiceArray[randomCharacter]
+  password = password + choiceArray[randomCharacter];
   }
+  return password;
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
