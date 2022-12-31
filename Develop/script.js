@@ -22,10 +22,6 @@ function passwordPrompts() {
     return false;
   }
 
-  if (confirm("Would you like to use special characters in your password?")) {
-  choiceArray = choiceArray.concat(charactersArray);
-  }
-
   if (confirm("Would you like to use lowercase letters in your password?")) {
       choiceArray = choiceArray.concat(lowercaseArray);
   }
@@ -37,6 +33,10 @@ function passwordPrompts() {
   if (confirm("Would you like to use numbers in your password?")) {
     choiceArray = choiceArray.concat(numbersArray);
   }
+
+  if (confirm("Would you like to use special characters in your password?")) {
+    choiceArray = choiceArray.concat(charactersArray);
+    }
 
   return true;
 }
@@ -62,5 +62,4 @@ var password = "";
   return password;
 }
 
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+
