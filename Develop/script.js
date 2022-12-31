@@ -1,5 +1,5 @@
 
-var passwordLength = 8;
+var passwordLength = [];
 var choiceArray=[];
 
 var charactersArray = ["@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+"];
