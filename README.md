@@ -33,7 +33,7 @@ This website generates a random unique password for the user, based on the speci
 
 ## Usage
 
-The following images show the completed website. You can visit the site by clicking [here.](https://tleeming15.github.io/my-portfolio/)
+The following images show the completed website. You can visit the site by clicking [here.](https://tleeming15.github.io/password-generator/)
 
 <img src="assets/images/p-g-initial-prompt.png" alt="Prompt for how many characters would you like the password to be."/>
 
